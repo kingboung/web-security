@@ -234,12 +234,12 @@ if __name__=='__main__':
         print('请选择你的操作:1、加密      2、解密      3、退出')
         operationCode = input().strip()
         if operationCode == '1':
-            cleartext = input('明文（16位十六进制）：').strip()
-            secretKey = input('密钥（64位二进制或16位十六进制）：').strip()
+            cleartext = input('明文（64位二进制）：').strip()
+            secretKey = input('密钥（64位二进制）：').strip()
             print('加密结果:' + generateCiphertext(cleartext, secretKey))
         if operationCode == '2':
             ciphertext = input('密文（16位十六进制）：').strip()
-            secretKey = input('密钥（64位二进制或16位十六进制）：').strip()
+            secretKey = input('密钥（64位二进制）：').strip()
             print('解密结果：' + generateCleartext(ciphertext, secretKey))
         if operationCode == '3':
             print('退出成功......')
