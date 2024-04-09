@@ -238,7 +238,7 @@ if __name__=='__main__':
             secretKey = input('密钥（64位二进制）：').strip()
             print('加密结果:' + generateCiphertext(cleartext, secretKey))
         if operationCode == '2':
-            ciphertext = input('密文（16位十六进制）：').strip()
+            ciphertext = input('密文（64位二进制）：').strip()
             secretKey = input('密钥（64位二进制）：').strip()
             print('解密结果：' + generateCleartext(ciphertext, secretKey))
         if operationCode == '3':
