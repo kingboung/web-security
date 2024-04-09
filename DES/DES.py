@@ -227,20 +227,20 @@ def bin2hex(bin):
 
 if __name__=='__main__':
     print('----------------------------------------------------------')
-    print('                欢迎使用华仔DES加密解密系统                    ')
+    print('                欢迎使用华仔DES加密解密系统                   ')
     print('----------------------------------------------------------')
     while True:
         print()
         print('请选择你的操作:1、加密      2、解密      3、退出')
         operationCode = input().strip()
-        if operationCode is '1':
-            cleartext = input('明文：').strip()
-            secretKey = input('密钥：').strip()
+        if operationCode == '1':
+            cleartext = input('明文（16位十六进制）：').strip()
+            secretKey = input('密钥（64位二进制或16位十六进制）：').strip()
             print('加密结果:' + generateCiphertext(cleartext, secretKey))
-        if operationCode is '2':
-            ciphertext = input('密文：').strip()
-            secretKey = input('密钥：').strip()
+        if operationCode == '2':
+            ciphertext = input('密文（16位十六进制）：').strip()
+            secretKey = input('密钥（64位二进制或16位十六进制）：').strip()
             print('解密结果：' + generateCleartext(ciphertext, secretKey))
-        if operationCode is '3':
+        if operationCode == '3':
             print('退出成功......')
             break
